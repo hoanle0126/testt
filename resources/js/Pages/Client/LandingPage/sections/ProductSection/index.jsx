@@ -7,8 +7,6 @@ import React from "react";
 const ProductSection = () => {
     const { props } = usePage();
 
-    console.log("props", props);
-
     return (
         <Box
             sx={{

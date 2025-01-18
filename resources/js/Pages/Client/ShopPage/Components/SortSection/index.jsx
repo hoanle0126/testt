@@ -15,8 +15,6 @@ const SortSection = () => {
     const { search } = window.location; // Lấy query string hiện tại
     const searchParams = new URLSearchParams(search);
 
-    console.log(props.asc);
-
     return (
         <Stack direction="row" gap="12px">
             <div className="flex-1"></div>
