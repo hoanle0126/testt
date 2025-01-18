@@ -11,7 +11,7 @@ const QuantitySection = () => {
     return (
         <>
             <Stack alignItems={"end"} gap={"8px"}>
-                {/* <Stack
+                <Stack
                     direction={"row"}
                     alignItems={"center"}
                     justifyContent={"space-between"}
@@ -63,7 +63,7 @@ const QuantitySection = () => {
                 </Stack>
                 <Typography variant="captiontext" color={"text.secondary"}>
                     Available: {props.product.remain}
-                </Typography> */}
+                </Typography>
             {/* </Stack> */}
             {/* <Divider /> */}
             {/* <Stack
