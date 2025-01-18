@@ -10,7 +10,7 @@ const QuantitySection = () => {
 
     return (
         <>
-            {/* <Stack alignItems={"end"} gap={"8px"}> */}
+            <Stack alignItems={"end"} gap={"8px"}>
                 {/* <Stack
                     direction={"row"}
                     alignItems={"center"}
@@ -90,8 +90,8 @@ const QuantitySection = () => {
                     }}
                 >
                     Add to card
-                </Button>
-            </Stack> */}
+                </Button> */}
+            </Stack>
         </>
     );
 };
