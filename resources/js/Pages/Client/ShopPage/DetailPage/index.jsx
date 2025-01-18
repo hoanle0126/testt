@@ -154,7 +154,7 @@ const ShopDetailPage = () => {
                             }}
                         />
                         <div className="flex-1"></div>
-                        <QuantitySection />
+                        {/* <QuantitySection /> */}
                         <Stack
                             sx={{
                                 height: "66px",
