@@ -4,7 +4,7 @@ import { router, usePage } from "@inertiajs/react";
 import { Button, Divider, IconButton, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const QuantitySection = () => {
+const QuantitySection = React.memo(() => {
     const { props } = usePage();
     const [quantityValue, setQuantityValue] = React.useState(1);
 
@@ -38,7 +38,8 @@ const QuantitySection = () => {
                             }}
                             disabled={quantityValue === 1}
                             onClick={() => {
-                                quantityValue > 1 && setQuantityValue((prev) => prev - 1);
+                                quantityValue > 1 &&
+                                    setQuantityValue((prev) => prev - 1);
                             }}
                         >
                             <Icon
@@ -47,7 +48,9 @@ const QuantitySection = () => {
                                 height={16}
                             />
                         </IconButton>
-                        <Typography color="text.primary">{quantityValue}</Typography>
+                        <Typography color="text.primary">
+                            {quantityValue}
+                        </Typography>
                         <IconButton
                             size="small"
                             sx={{ borderRadius: "8px" }}
@@ -94,6 +97,6 @@ const QuantitySection = () => {
             </Stack>
         </>
     );
-};
+});
 
 export default QuantitySection;
