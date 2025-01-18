@@ -20,7 +20,6 @@ import GlobalStyle from "@/Components/GlobalStyle";
 import { formatCurrency } from "@/Function/formatCurrency";
 import ThumbnailCarousel from "@/Components/Thumbnail";
 
-const OPTIONS = {};
 
 const ShopDetailPage = () => {
     const { props } = usePage();
@@ -87,7 +86,6 @@ const ShopDetailPage = () => {
                             slides={[props.product.thumbnail].concat(
                                 props.product.images
                             )}
-                            options={OPTIONS}
                         />
                     </Stack>
                 </Grid2>

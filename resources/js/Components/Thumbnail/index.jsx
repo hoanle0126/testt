@@ -4,9 +4,9 @@ import { Box, Button } from "@mui/material";
 import { Thumb } from "./components/ThumbButton";
 
 const ThumbnailCarousel = (props) => {
-    const { slides, options } = props;
+    const { slides } = props;
     const [selectedIndex, setSelectedIndex] = useState(0);
-    const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
+    const [emblaMainRef, emblaMainApi] = useEmblaCarousel({});
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
         containScroll: "keepSnaps",
         dragFree: true,
@@ -63,11 +63,13 @@ const ThumbnailCarousel = (props) => {
             </Box>
 
             <Box sx={{ marginTop: "20px" }}>
-                <Box sx={{overflow:"hidden"}} ref={emblaThumbsRef}>
-                    <Box sx={{
-                        display:"flex",
-                        marginLeft:"-20px"
-                    }}>
+                <Box sx={{ overflow: "hidden" }} ref={emblaThumbsRef}>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            marginLeft: "-20px",
+                        }}
+                    >
                         {slides.map((value, index) => (
                             <Thumb
                                 value={value}
