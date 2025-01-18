@@ -43,11 +43,6 @@ class ShopController extends Controller
         }
 
         return Inertia::render('Client/ShopPage/index', [
-            "category" => $category,
-            "range" => $range,
-            "sort" => $sort,
-            "asc" => $asc,
-            "paginate" => $paginate,
             "categories" => CategoryResource::collection(Category::all()),
             "products" => ProductResource::collection($products->paginate($paginate ? $paginate : 8))
         ]);
