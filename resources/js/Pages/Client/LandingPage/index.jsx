@@ -3,6 +3,8 @@ import ClientLayout from "@/Layouts/ClientLayout";
 import { Icon } from "@iconify/react";
 import { Box, Button, Grid2, Stack, Typography } from "@mui/material";
 import React from "react";
+import CategorySection from "./sections/CategorySection";
+import ProductSection from "./sections/ProductSection";
 
 const OPTIONS = { loop: true };
 const SLIDE_COUNT = 5;
@@ -107,6 +109,8 @@ const LandingPage = () => {
                         ))}
                     </Grid2>
                 </Box>
+                <CategorySection />
+                <ProductSection />
             </Box>
         </ClientLayout>
     );
