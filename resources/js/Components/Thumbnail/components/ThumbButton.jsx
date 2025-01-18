@@ -6,16 +6,17 @@ export const Thumb = (props) => {
 
     return (
         <Box
-            className={"embla-thumbs__slide".concat(
-                selected ? " embla-thumbs__slide--selected" : ""
-            )}
+            sx={{
+                flex: "0 0 22%",
+                minWidth: 0,
+                paddingLeft: "20px",
+                aspectRatio: "1 / 1",
+                opacity: selected ? 1 : 0.6,
+                cursor: "pointer",
+            }}
             onClick={() => onClick(index)}
         >
-            <img
-                src={value}
-                alt=""
-                className="w-full h-full"
-            />
+            <img src={value} alt="" className="w-full h-full" />
         </Box>
     );
 };

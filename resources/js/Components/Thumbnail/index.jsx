@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Box, Button } from "@mui/material";
-import "./css/index.css";
 import { Thumb } from "./components/ThumbButton";
 
 const ThumbnailCarousel = (props) => {
@@ -35,20 +34,40 @@ const ThumbnailCarousel = (props) => {
     }, [emblaMainApi, onSelect]);
 
     return (
-        <div className="embla">
-            <div className="embla__viewport" ref={emblaMainRef}>
-                <div className="embla__container">
+        <div>
+            <Box sx={{ overflow: "hidden" }} ref={emblaMainRef}>
+                <Box
+                    sx={{
+                        display: "flex",
+                        marginLeft: "calc(20px * -1)",
+                    }}
+                >
                     {slides.map((value, index) => (
-                        <Box className="embla__slide" key={index}>
+                        <Box
+                            sx={{
+                                transform: "translate3d(0, 0, 0)",
+                                flex: "0 0 100%",
+                                minWidth: 0,
+                                paddingLeft: "20px",
+                                aspectRatio: "1 / 1",
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                            }}
+                            key={index}
+                        >
                             <img src={value} alt="" className="w-full h-full" />
                         </Box>
                     ))}
-                </div>
-            </div>
+                </Box>
+            </Box>
 
-            <div className="embla-thumbs">
-                <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>
-                    <div className="embla-thumbs__container">
+            <Box sx={{ marginTop: "20px" }}>
+                <Box sx={{overflow:"hidden"}} ref={emblaThumbsRef}>
+                    <Box sx={{
+                        display:"flex",
+                        marginLeft:"-20px"
+                    }}>
                         {slides.map((value, index) => (
                             <Thumb
                                 value={value}
@@ -58,9 +77,9 @@ const ThumbnailCarousel = (props) => {
                                 index={index}
                             />
                         ))}
-                    </div>
-                </div>
-            </div>
+                    </Box>
+                </Box>
+            </Box>
         </div>
     );
 };
