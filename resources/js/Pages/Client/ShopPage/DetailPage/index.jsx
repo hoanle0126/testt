@@ -80,7 +80,14 @@ const ShopDetailPage = () => {
             </Stack>
             <Grid2 container spacing="80px" paddingX="160px">
                 <Grid2 size={7}>
-                    <Stack gap="12px">xzcxzc</Stack>
+                    <Stack gap="12px">
+                        <ThumbnailCarousel
+                            slides={[props.product.thumbnail].concat(
+                                props.product.images
+                            )}
+                            options={OPTIONS}
+                        />
+                    </Stack>
                 </Grid2>
                 <Grid2 size={5}>
                     <Stack
