@@ -7,14 +7,11 @@ import {
     Button,
     Divider,
     Grid2,
-    IconButton,
-    Rating,
     Stack,
     Tab,
     Tabs,
     Typography,
 } from "@mui/material";
-import EmblaCarousel from "@/Components/Carousel";
 import React from "react";
 import { Icon } from "@iconify/react";
 import { CustomTabPanel } from "@/Components/CustomTabPanel";
@@ -25,8 +22,6 @@ import QuantitySection from "./sections/QuantitySection";
 import GlobalStyle from "@/Components/GlobalStyle";
 
 const OPTIONS = {};
-const SLIDE_COUNT = 10;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const ShopDetailPage = () => {
     const { props } = usePage();
@@ -35,8 +30,6 @@ const ShopDetailPage = () => {
     const handleTab = (event, newValue) => {
         setTab(newValue);
     };
-
-    console.log(props.product);
 
     return (
         <ClientLayout>

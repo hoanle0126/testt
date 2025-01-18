@@ -1,4 +1,3 @@
-import { MuiTheme } from "@/Theme";
 import { Icon } from "@iconify/react";
 import { router, usePage } from "@inertiajs/react";
 import { Button, Divider, IconButton, Stack, Typography } from "@mui/material";
