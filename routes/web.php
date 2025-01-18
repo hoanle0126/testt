@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ShopController;
 use App\Http\Resources\CategoryResource;
 use App\Http\Resources\ProductResource;
 use App\Models\Category;
@@ -15,6 +16,7 @@ Route::get('/', function () {
         "products" => ProductResource::collection(Product::paginate(8))
     ]);
 })->name("landing");
+Route::resource("/shop", ShopController::class);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

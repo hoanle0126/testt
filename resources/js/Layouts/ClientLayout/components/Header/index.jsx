@@ -56,7 +56,7 @@ const ClientHeader = () => {
             >
                 {[
                     { title: "Home", route: "landing" },
-                    { title: "Shop", route: "landing" },
+                    { title: "Shop", route: "shop.index" },
                     { title: "News", route: "landing" },
                     { title: "About us", route: "landing" },
                     { title: "Contact us", route: "landing" },
