@@ -20,7 +20,7 @@ import GlobalStyle from "@/Components/GlobalStyle";
 import { formatCurrency } from "@/Function/formatCurrency";
 import ThumbnailCarousel from "@/Components/Thumbnail";
 
-// const OPTIONS = {};
+const OPTIONS = {};
 
 const ShopDetailPage = () => {
     const { props } = usePage();
@@ -80,6 +80,18 @@ const ShopDetailPage = () => {
                     </Box>
                 </Stack>
             </Stack>
+            <Grid2 container spacing="80px" paddingX="160px">
+                <Grid2 size={7}>
+                    <Stack gap="12px">
+                        <ThumbnailCarousel
+                            slides={[props.product.thumbnail].concat(
+                                props.product.images
+                            )}
+                            options={OPTIONS}
+                        />
+                    </Stack>
+                </Grid2>
+            </Grid2>
         </ClientLayout>
     );
 };
