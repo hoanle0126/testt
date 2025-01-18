@@ -18,7 +18,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import GlobalStyle from "@/Components/GlobalStyle";
 import { formatCurrency } from "@/Function/formatCurrency";
-import ThumbnailCarousel from "@/Components/Thumbnail";
+// import ThumbnailCarousel from "@/Components/Thumbnail";
 
 // const OPTIONS = {};
 
