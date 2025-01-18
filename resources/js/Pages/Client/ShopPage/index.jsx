@@ -1,13 +1,7 @@
 import ClientLayout from "@/Layouts/ClientLayout";
 import { MuiTheme } from "@/Theme";
 import { Link, router, usePage } from "@inertiajs/react";
-import {
-    Box,
-    Breadcrumbs,
-    Pagination,
-    Stack,
-    Typography,
-} from "@mui/material";
+import { Box, Breadcrumbs, Pagination, Stack, Typography } from "@mui/material";
 import React from "react";
 import FilterSection from "./Components/FilterSection";
 import SortSection from "./Components/SortSection";
@@ -25,7 +19,48 @@ const ShopPage = () => {
                 sx={{
                     gap: "40px",
                 }}
-            >ádasd
+            >
+                <Stack>
+                    <Box
+                        sx={{
+                            width: "100%",
+                            backgroundColor: "text.secondary",
+                            display: "flex",
+                            alignItems: "center",
+                            paddingX: "160px",
+                            paddingY: "40px",
+                        }}
+                    >
+                        <Typography variant="h4" color="background.paper">
+                            Shop
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            width: "100%",
+                            backgroundColor: "background.neutral",
+                            display: "flex",
+                            alignItems: "center",
+                            paddingX: "160px",
+                            paddingY: "20px",
+                        }}
+                    >
+                        <Breadcrumbs
+                            aria-label="breadcrumb"
+                            sx={{
+                                fontSize: MuiTheme().typography.body2,
+                                ".current": {
+                                    color: "text.primary",
+                                },
+                            }}
+                        >
+                            <Link underline="hover" color="inherit" href="/">
+                                Home
+                            </Link>
+                            <Link className="current">Shop</Link>
+                        </Breadcrumbs>
+                    </Box>
+                </Stack>
             </Stack>
         </ClientLayout>
     );
