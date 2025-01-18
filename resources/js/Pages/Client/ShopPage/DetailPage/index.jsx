@@ -19,6 +19,9 @@ import { Icon } from "@iconify/react";
 import GlobalStyle from "@/Components/GlobalStyle";
 import { formatCurrency } from "@/Function/formatCurrency";
 import ThumbnailCarousel from "@/Components/Thumbnail";
+import QuantitySection from "./sections/QuantitySection";
+
+const OPTIONS = {};
 
 const ShopDetailPage = () => {
     const { props } = usePage();
