@@ -60,11 +60,11 @@ const ClientFooter = () => {
             >
                 <Typography variant="subtitle1">Categories</Typography>
                 <Stack gap="12px">
-                    {/* {props.categories.map((itemCategory, indexCategory) => (
+                    {props.categories.map((itemCategory, indexCategory) => (
                         <Typography variant="body2" key={indexCategory}>
                             {itemCategory.name}
                         </Typography>
-                    ))} */}
+                    ))}
                 </Stack>
             </Stack>
             <Stack
