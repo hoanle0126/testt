@@ -11,7 +11,7 @@ const QuantitySection = () => {
     return (
         <>
             <Stack alignItems={"end"} gap={"8px"}>
-                <Stack
+                {/* <Stack
                     direction={"row"}
                     alignItems={"center"}
                     justifyContent={"space-between"}
@@ -60,7 +60,7 @@ const QuantitySection = () => {
                             <Icon icon="eva:plus-fill" width={16} height={16} />
                         </IconButton>
                     </Stack>
-                </Stack>
+                </Stack> */}
                 <Typography variant="captiontext" color={"text.secondary"}>
                     Available: {props.product.remain}
                 </Typography>
