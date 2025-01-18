@@ -69,6 +69,7 @@ const ShopPage = () => {
                         gap: "40px",
                     }}
                 >
+                    <FilterSection />
                     <Stack flex={1} gap="20px">
                         <SortSection />
                         <ProductSection />

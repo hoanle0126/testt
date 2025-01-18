@@ -7,10 +7,6 @@ const FilterCategory = () => {
     const { search } = window.location; // Lấy query string hiện tại
     const searchParams = new URLSearchParams(search);
 
-    React.useEffect(() => {
-        console.log(url.includes("?"));
-    }, []);
-
     return (
         <Stack gap="20px">
             <Typography
