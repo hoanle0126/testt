@@ -25,77 +25,7 @@ const ShopPage = () => {
                 sx={{
                     gap: "40px",
                 }}
-            >
-                <Stack>
-                    <Box
-                        sx={{
-                            width: "100%",
-                            backgroundColor: "text.secondary",
-                            display: "flex",
-                            alignItems: "center",
-                            paddingX: "160px",
-                            paddingY: "40px",
-                        }}
-                    >
-                        <Typography variant="h4" color="background.paper">
-                            Shop
-                        </Typography>
-                    </Box>
-                    <Box
-                        sx={{
-                            width: "100%",
-                            backgroundColor: "background.neutral",
-                            display: "flex",
-                            alignItems: "center",
-                            paddingX: "160px",
-                            paddingY: "20px",
-                        }}
-                    >
-                        <Breadcrumbs
-                            aria-label="breadcrumb"
-                            sx={{
-                                fontSize: MuiTheme().typography.body2,
-                                ".current": {
-                                    color: "text.primary",
-                                },
-                            }}
-                        >
-                            <Link underline="hover" color="inherit" href="/">
-                                Home
-                            </Link>
-                            <Link className="current">Shop</Link>
-                        </Breadcrumbs>
-                    </Box>
-                </Stack>
-                <Stack
-                    sx={{
-                        paddingX: "160px",
-                        paddingBottom: "80px",
-                        flexDirection: "row",
-                        gap: "40px",
-                    }}
-                >
-                    <FilterSection />
-                    <Stack flex={1} gap="20px">
-                        <SortSection />
-                        <ProductSection />
-                        <Stack alignItems="center" marginTop="20px">
-                            <Pagination
-                                count={props.products.meta.last_page}
-                                page={Number(searchParams.get("page")) || 1}
-                                onChange={(e, value) => {
-                                    searchParams.set("page", value);
-                                    router.visit(
-                                        `?${searchParams.toString()}`,
-                                        {
-                                            preserveState: true,
-                                        }
-                                    );
-                                }}
-                            />
-                        </Stack>
-                    </Stack>
-                </Stack>
+            >ádasd
             </Stack>
         </ClientLayout>
     );
