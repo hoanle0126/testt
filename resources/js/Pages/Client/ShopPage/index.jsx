@@ -61,6 +61,34 @@ const ShopPage = () => {
                         </Breadcrumbs>
                     </Box>
                 </Stack>
+                <Stack
+                    sx={{
+                        paddingX: "160px",
+                        paddingBottom: "80px",
+                        flexDirection: "row",
+                        gap: "40px",
+                    }}
+                >
+                    <Stack flex={1} gap="20px">
+                        <SortSection />
+                        <ProductSection />
+                        <Stack alignItems="center" marginTop="20px">
+                            <Pagination
+                                count={props.products.meta.last_page}
+                                page={Number(searchParams.get("page")) || 1}
+                                onChange={(e, value) => {
+                                    searchParams.set("page", value);
+                                    router.visit(
+                                        `?${searchParams.toString()}`,
+                                        {
+                                            preserveState: true,
+                                        }
+                                    );
+                                }}
+                            />
+                        </Stack>
+                    </Stack>
+                </Stack>
             </Stack>
         </ClientLayout>
     );
