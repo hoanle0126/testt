@@ -61,9 +61,9 @@ const QuantitySection = () => {
                         </IconButton>
                     </Stack>
                 </Stack> */}
-                <Typography variant="captiontext" color={"text.secondary"}>
+                {/* <Typography variant="captiontext" color={"text.secondary"}>
                     Available: {props.product.remain}
-                </Typography>
+                </Typography> */}
             {/* </Stack> */}
             {/* <Divider /> */}
             {/* <Stack
