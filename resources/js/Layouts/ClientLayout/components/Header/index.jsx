@@ -56,10 +56,10 @@ const ClientHeader = () => {
             >
                 {[
                     { title: "Home", route: "landing" },
-                    { title: "Shop", route: "shop.index" },
-                    { title: "News", route: "shop.index" },
-                    { title: "About us", route: "shop.index" },
-                    { title: "Contact us", route: "shop.index" },
+                    { title: "Shop", route: "landing" },
+                    { title: "News", route: "landing" },
+                    { title: "About us", route: "landing" },
+                    { title: "Contact us", route: "landing" },
                 ].map((navItem, navIndex) => (
                     <Link key={navIndex} href={route(navItem.route)}>
                         {navItem.title}
