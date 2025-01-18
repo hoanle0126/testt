@@ -21,5 +21,5 @@ class TrustProxies extends Middleware
      *
      * @var int
      */
-    protected $headers = $request->header('X-Forwarded-For');
+    protected $headers = Request::HEADER_X_FORWARDED_FOR;
 }
