@@ -24,11 +24,11 @@ import ThumbnailCarousel from "@/Components/Thumbnail";
 
 const ShopDetailPage = () => {
     const { props } = usePage();
-    // const [tab, setTab] = React.useState("1");
+    const [tab, setTab] = React.useState("1");
 
-    // const handleTab = (event, newValue) => {
-    //     setTab(newValue);
-    // };
+    const handleTab = (event, newValue) => {
+        setTab(newValue);
+    };
 
     return (
         <ClientLayout>
