@@ -15,20 +15,20 @@ import {
     Typography,
 } from "@mui/material";
 import React from "react";
-import { Icon } from "@iconify/react";
-import GlobalStyle from "@/Components/GlobalStyle";
-import { formatCurrency } from "@/Function/formatCurrency";
-import ThumbnailCarousel from "@/Components/Thumbnail";
+// import { Icon } from "@iconify/react";
+// import GlobalStyle from "@/Components/GlobalStyle";
+// import { formatCurrency } from "@/Function/formatCurrency";
+// import ThumbnailCarousel from "@/Components/Thumbnail";
 
-const OPTIONS = {};
+// const OPTIONS = {};
 
 const ShopDetailPage = () => {
     const { props } = usePage();
-    const [tab, setTab] = React.useState("1");
+    // const [tab, setTab] = React.useState("1");
 
-    const handleTab = (event, newValue) => {
-        setTab(newValue);
-    };
+    // const handleTab = (event, newValue) => {
+    //     setTab(newValue);
+    // };
 
     return (
         <ClientLayout>
