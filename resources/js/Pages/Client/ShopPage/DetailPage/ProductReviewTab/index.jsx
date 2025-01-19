@@ -1,25 +1,25 @@
-import ReviewModal from "@/Components/ReviewModal";
-import { formatDate } from "@/Function/formatDate";
-import { MuiTheme } from "@/Theme";
-import { Icon } from "@iconify/react";
-import { router, usePage } from "@inertiajs/react";
-import {
-    Avatar,
-    Box,
-    Button,
-    IconButton,
-    LinearProgress,
-    Pagination,
-    Rating,
-    Stack,
-    Typography,
-    Grid2,
-} from "@mui/material";
-import React from "react";
+// import ReviewModal from "@/Components/ReviewModal";
+// import { formatDate } from "@/Function/formatDate";
+// import { MuiTheme } from "@/Theme";
+// import { Icon } from "@iconify/react";
+// import { router, usePage } from "@inertiajs/react";
+// import {
+//     Avatar,
+//     Box,
+//     Button,
+//     IconButton,
+//     LinearProgress,
+//     Pagination,
+//     Rating,
+//     Stack,
+//     Typography,
+//     Grid2,
+// } from "@mui/material";
+// import React from "react";
 
 const ProductReviewTab = React.memo(() => {
-    const { props } = usePage();
-    const [open, setOpen] = React.useState(false);
+    // const { props } = usePage();
+    // const [open, setOpen] = React.useState(false);
 
     return (
         <></>

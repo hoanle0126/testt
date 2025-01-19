@@ -15,13 +15,13 @@ import {
     Typography,
 } from "@mui/material";
 import React from "react";
-import { Icon } from "@iconify/react";
-import { CustomTabPanel } from "@/Components/CustomTabPanel";
-import ProductReviewTab from "./ProductReviewTab";
-import ThumbnailCarousel from "@/Components/Thumbnail";
-import { formatCurrency } from "@/Function/formatCurrency";
-import QuantitySection from "./sections/QuantitySection";
-import GlobalStyle from "@/Components/GlobalStyle";
+// import { Icon } from "@iconify/react";
+// import { CustomTabPanel } from "@/Components/CustomTabPanel";
+// import ProductReviewTab from "./ProductReviewTab";
+// import ThumbnailCarousel from "@/Components/Thumbnail";
+// import { formatCurrency } from "@/Function/formatCurrency";
+// import QuantitySection from "./sections/QuantitySection";
+// import GlobalStyle from "@/Components/GlobalStyle";
 
 const ShopDetailPage = () => {
     const { props } = usePage();

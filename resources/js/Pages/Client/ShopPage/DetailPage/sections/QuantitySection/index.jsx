@@ -1,12 +1,12 @@
-import { MuiTheme } from "@/Theme";
-import { Icon } from "@iconify/react";
-import { router, usePage } from "@inertiajs/react";
-import { Button, Divider, IconButton, Stack, Typography } from "@mui/material";
-import React from "react";
+// import { MuiTheme } from "@/Theme";
+// import { Icon } from "@iconify/react";
+// import { router, usePage } from "@inertiajs/react";
+// import { Button, Divider, IconButton, Stack, Typography } from "@mui/material";
+// import React from "react";
 
 const QuantitySection = React.memo(() => {
-    const { props } = usePage();
-    const [quantityValue, setQuantityValue] = React.useState(1);
+    // const { props } = usePage();
+    // const [quantityValue, setQuantityValue] = React.useState(1);
 
     return (
         <>
