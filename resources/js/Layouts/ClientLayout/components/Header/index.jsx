@@ -14,7 +14,7 @@ import React from "react";
 import SearchModal from "./components/SearchModal";
 import AvatarHeader from "./components/AvatarHeader";
 
-const ClientHeader = () => {
+const ClientHeader = React.memo(() => {
     const { props } = usePage();
     const [openSearch, setOpenSearch] = React.useState(false);
 
@@ -116,6 +116,6 @@ const ClientHeader = () => {
             />
         </Box>
     );
-};
+});
 
 export default ClientHeader;

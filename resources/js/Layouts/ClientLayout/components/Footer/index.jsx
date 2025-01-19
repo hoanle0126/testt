@@ -3,7 +3,7 @@ import { usePage } from "@inertiajs/react";
 import { Box, Button, OutlinedInput, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const ClientFooter = () => {
+const ClientFooter = React.memo(() => {
     const { props } = usePage();
 
     return (
@@ -30,7 +30,7 @@ const ClientFooter = () => {
                         backgroundColor: "grey.900",
                         overflow: "hidden",
                         marginBottom: "12px",
-                        borderRadius:"50%"
+                        borderRadius: "50%",
                     }}
                 >
                     <img
@@ -106,6 +106,6 @@ const ClientFooter = () => {
             </Stack>
         </Stack>
     );
-};
+});
 
 export default ClientFooter;

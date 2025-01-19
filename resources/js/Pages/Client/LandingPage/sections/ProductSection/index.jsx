@@ -4,7 +4,7 @@ import { usePage } from "@inertiajs/react";
 import { Box, Button, Grid2, Rating, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const ProductSection = () => {
+const ProductSection = React.memo(() => {
     const { props } = usePage();
 
     return (
@@ -48,7 +48,7 @@ const ProductSection = () => {
             </center>
             <Grid2 container spacing="40px">
                 {props.products.data.map((item, index) => (
-                    <Grid2 size={3}>
+                    <Grid2 size={3} key={index}>
                         <Stack gap={"4px"} height={"100%"}>
                             <Stack
                                 sx={{
@@ -106,6 +106,6 @@ const ProductSection = () => {
             </Stack>
         </Box>
     );
-};
+});
 
 export default ProductSection;

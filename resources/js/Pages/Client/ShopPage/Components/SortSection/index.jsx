@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const SortSection = () => {
+const SortSection = React.memo(() => {
     const { props, url } = usePage();
     const { search } = window.location; // Lấy query string hiện tại
     const searchParams = new URLSearchParams(search);
@@ -74,6 +74,6 @@ const SortSection = () => {
             </IconButton>
         </Stack>
     );
-};
+});
 
 export default SortSection;

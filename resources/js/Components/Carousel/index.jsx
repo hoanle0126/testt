@@ -9,7 +9,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Box, Grid2, Typography } from "@mui/material";
 
-const EmblaCarousel = (props) => {
+const EmblaCarousel = React.memo((props) => {
     const { slides, options, spacing, height, numImage, dots, arrows } = props;
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [
         Autoplay({ playOnInit: true, delay: 3000 }),
@@ -83,6 +83,6 @@ const EmblaCarousel = (props) => {
             </div> */}
         </Box>
     );
-};
+});
 
 export default EmblaCarousel;

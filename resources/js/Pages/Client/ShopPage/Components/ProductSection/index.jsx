@@ -4,7 +4,7 @@ import { Box, Grid2, Rating, Stack, Typography } from "@mui/material";
 import React from "react";
 import ProductCart from "./components/ProductCart";
 
-const ProductSection = () => {
+const ProductSection = React.memo(() => {
     const { props } = usePage();
 
     return (
@@ -16,6 +16,6 @@ const ProductSection = () => {
             ))}
         </Grid2>
     );
-};
+});
 
 export default ProductSection;

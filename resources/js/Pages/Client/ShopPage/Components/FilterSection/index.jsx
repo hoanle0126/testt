@@ -3,7 +3,7 @@ import React from "react";
 import FilterCategory from "./components/FilterCategory";
 import FilterPrice from "./components/FilterPrice";
 
-const FilterSection = () => {
+const FilterSection = React.memo(() => {
     const [getParam, setGetParam] = React.useState("?");
 
     return (
@@ -12,6 +12,6 @@ const FilterSection = () => {
             <FilterPrice />
         </Stack>
     );
-};
+});
 
 export default FilterSection;

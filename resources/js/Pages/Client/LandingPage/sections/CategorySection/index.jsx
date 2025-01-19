@@ -1,9 +1,5 @@
 import React from "react";
-import {
-    PrevButton,
-    NextButton,
-    usePrevNextButtons,
-} from "./components/ArrowButton";
+import { usePrevNextButtons } from "./components/ArrowButton";
 import useEmblaCarousel from "embla-carousel-react";
 import { usePage } from "@inertiajs/react";
 import {
@@ -21,7 +17,7 @@ const options = { align: "start" };
 const SLIDE_COUNT = 6;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
 
-const CategorySection = () => {
+const CategorySection = React.memo(() => {
     const { props } = usePage();
     const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
@@ -154,11 +150,11 @@ const CategorySection = () => {
                         top: "50%",
                         transform: "translate(-50%, -50%)",
                     }}
+                    onClick={onPrevButtonClick}
+                    disabled={prevBtnDisabled}
                 >
                     <Icon
                         icon="eva:arrow-ios-back-fill"
-                        onClick={onPrevButtonClick}
-                        disabled={prevBtnDisabled}
                         width={60}
                         height={60}
                     />
@@ -170,11 +166,11 @@ const CategorySection = () => {
                         top: "50%",
                         transform: "translate(-50%, -50%)",
                     }}
+                    onClick={onNextButtonClick}
+                    disabled={nextBtnDisabled}
                 >
                     <Icon
                         icon="eva:arrow-ios-forward-fill"
-                        onClick={onNextButtonClick}
-                        disabled={nextBtnDisabled}
                         width={60}
                         height={60}
                     />
@@ -182,6 +178,6 @@ const CategorySection = () => {
             </Box>
         </Box>
     );
-};
+});
 
 export default CategorySection;

@@ -2,7 +2,7 @@ import { router, usePage } from "@inertiajs/react";
 import { Avatar, Checkbox, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const FilterCategory = () => {
+const FilterCategory = React.memo(() => {
     const { props, url } = usePage();
     const { search } = window.location; // Lấy query string hiện tại
     const searchParams = new URLSearchParams(search);
@@ -82,6 +82,6 @@ const FilterCategory = () => {
             </Stack>
         </Stack>
     );
-};
+});
 
 export default FilterCategory;

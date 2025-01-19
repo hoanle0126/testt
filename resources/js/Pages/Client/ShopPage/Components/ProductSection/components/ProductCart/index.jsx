@@ -5,7 +5,7 @@ import { router } from "@inertiajs/react";
 import { Box, IconButton, Rating, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const ProductCart = ({ shopItem }) => {
+const ProductCart = React.memo(({ shopItem }) => {
     const [hover, setHover] = React.useState(false);
 
     return (
@@ -89,11 +89,7 @@ const ProductCart = ({ shopItem }) => {
                     </Stack>
                 )}
             </Box>
-            <Stack
-                gap="2px"
-                paddingTop="8px"
-                sx={{ height: "100%" }}
-            >
+            <Stack gap="2px" paddingTop="8px" sx={{ height: "100%" }}>
                 <Typography
                     variant="subtitle1"
                     sx={{
@@ -125,6 +121,6 @@ const ProductCart = ({ shopItem }) => {
             </Stack>
         </Stack>
     );
-};
+});
 
 export default ProductCart;

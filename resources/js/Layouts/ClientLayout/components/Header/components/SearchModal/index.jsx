@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const SearchModal = ({ open, handleClose }) => {
+const SearchModal = React.memo(({ open, handleClose }) => {
     const [searchValue, setSearchValue] = React.useState("");
 
     return (
@@ -81,6 +81,6 @@ const SearchModal = ({ open, handleClose }) => {
             </Box>
         </Modal>
     );
-};
+});
 
 export default SearchModal;

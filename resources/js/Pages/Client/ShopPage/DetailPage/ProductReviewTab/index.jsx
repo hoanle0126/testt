@@ -17,41 +17,9 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const ProductReviewTab = () => {
+const ProductReviewTab = React.memo(() => {
     const { props } = usePage();
     const [open, setOpen] = React.useState(false);
-    const [like, setLike] = React.useState({
-        like: 0,
-        dislike: 0,
-    });
-
-    const handleLikeDislike = (id, type) => {
-        router.put(
-            route("reviews.update", id),
-            { like: type },
-            {
-                preserveScroll: true,
-                preserveState: true,
-                onSuccess: () => {
-                    // Cập nhật lại trạng thái sau khi yêu cầu thành công
-                    setLikeState((prevState) => ({
-                        ...prevState,
-                        [type]: prevState[type] === id ? null : id,
-                    }));
-                },
-            }
-        );
-    };
-
-    const userLikedOrDisliked = (likes, reactionType) => {
-        return likes?.some((likeItem) => likeItem[reactionType] === 1);
-    };
-
-    const hasProductInOrder = (user, productId) => {
-        return user.orders.some((order) =>
-            order.products.some((product) => product.id === productId)
-        );
-    };
 
     return (
         <Box>
@@ -231,6 +199,6 @@ const ProductReviewTab = () => {
             </Stack>
         </Box>
     );
-};
+});
 
 export default ProductReviewTab;

@@ -3,7 +3,7 @@ import { router, usePage } from "@inertiajs/react";
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 
-const FilterPrice = () => {
+const FilterPrice = React.memo(() => {
     const { props } = usePage();
     const { search } = window.location; // Lấy query string hiện tại
     const searchParams = new URLSearchParams(search);
@@ -37,6 +37,6 @@ const FilterPrice = () => {
             />
         </Stack>
     );
-};
+});
 
 export default FilterPrice;

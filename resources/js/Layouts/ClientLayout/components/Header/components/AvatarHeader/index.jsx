@@ -3,7 +3,7 @@ import { router } from "@inertiajs/react";
 import { Avatar, MenuItem, MenuList, Popover, Typography } from "@mui/material";
 import React from "react";
 
-const AvatarHeader = () => {
+const AvatarHeader = React.memo(() => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [openSetting, setOpenSetting] = React.useState(false);
 
@@ -48,6 +48,6 @@ const AvatarHeader = () => {
             </Popover>
         </>
     );
-};
+});
 
 export default AvatarHeader;

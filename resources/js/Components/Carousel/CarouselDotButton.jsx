@@ -38,7 +38,7 @@ export const useDotButton = (emblaApi) => {
     };
 };
 
-export const DotButton = (props) => {
+export const DotButton = React.memo((props) => {
     const { children, ...restProps } = props;
 
     return (
@@ -46,4 +46,4 @@ export const DotButton = (props) => {
             {children}
         </button>
     );
-};
+});
