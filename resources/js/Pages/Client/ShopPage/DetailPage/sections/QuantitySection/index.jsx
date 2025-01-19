@@ -10,7 +10,7 @@ const QuantitySection = React.memo(() => {
 
     return (
         <>
-            <Stack alignItems={"end"} gap={"8px"}>
+            {/* <Stack alignItems={"end"} gap={"8px"}>
                 <Stack
                     direction={"row"}
                     alignItems={"center"}
@@ -94,7 +94,7 @@ const QuantitySection = React.memo(() => {
                 >
                     Add to card
                 </Button>
-            </Stack>
+            </Stack> */}
         </>
     );
 });
